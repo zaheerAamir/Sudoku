@@ -46,7 +46,7 @@ function solveSudoku(){
     console.log('data', data)                                   //format specifier mentioned in the () barcket if u leave the bracket empty then by default it will seperate each and every elemnt by a comma(,)
     
     fetch('https://project-sathom.herokuapp.com/',{
-        method: 'POST',
+        method: 'GET',
         headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json'
