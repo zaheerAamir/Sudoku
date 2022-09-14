@@ -29,8 +29,4 @@ app.post('/solve', (req,res) => {
     })
 })
 
-
-app.get('/',(req,res) => {
-    res.send('App is running')
-})
 app.listen(PORT, () => console.log('server listening on PORT ',{PORT}))
