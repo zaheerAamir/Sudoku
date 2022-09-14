@@ -6,7 +6,7 @@ const cors = require('cors')
 require('dotenv').config()
 const app = express()
 app.use(cors({
-    origin: 'https://heartfelt-blancmange-4ce36d.netlify.app/',
+    origin: 'https://heartfelt-blancmange-4ce36d.netlify.app/solve',
     methods: ['GET','POST'],
 }))
 app.use(express.json())
