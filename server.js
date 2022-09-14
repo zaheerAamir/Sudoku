@@ -17,7 +17,7 @@ app.use(express.json())
 app.post('https://project-sathom.herokuapp.com/', (req,res) => {
 
     const options = {
-        method: 'POST',
+        method: 'GET',
         url: 'https://solve-sudoku.p.rapidapi.com/',
         headers: {
             'content-type': 'application/json',
