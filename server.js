@@ -2,14 +2,19 @@ const PORT = process.env.PORT || 8000
 const axios = require('axios').default
 const express = require('express')
 const cors = require('cors')
+const corsOption = {
+    origin:'*', 
+   credentials:true,            //access-control-allow-credentials:true
+   optionSuccessStatus:200,
+}
 require('dotenv').config()
 const app = express()
-app.use(cors())
+app.use(cors(corsOption))
 app.use(express.json())
 
 
 
-app.post('https://project-sathom.herokuapp.com/', (req,res) => {
+app.post('/', (req,res) => {
     const options = {
         method: 'POST',
         url: 'https://solve-sudoku.p.rapidapi.com/',
