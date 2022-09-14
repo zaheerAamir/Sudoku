@@ -13,7 +13,7 @@ app.use(cors(corsOption))
 app.use(express.json())
 
 
-app.post('/solve', (req,res) => {
+app.post('/', (req,res) => {
 
     const options = {
         method: 'POST',
