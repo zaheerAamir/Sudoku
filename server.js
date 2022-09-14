@@ -16,7 +16,6 @@ app.post('/solve', (req,res) => {
 
     const options = {
         method: 'POST',
-        mode: 'cors',
         url: 'https://solve-sudoku.p.rapidapi.com/',
         headers: {
             'content-type': 'application/json',

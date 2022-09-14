@@ -47,6 +47,7 @@ function solveSudoku(){
     
     fetch('https://project-sathom.herokuapp.com/solve',{
         method: 'POST',
+        mode: 'cors',
         headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json'
