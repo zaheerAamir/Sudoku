@@ -57,7 +57,7 @@ function solveSudoku(){
             console.log(data)
             populateValues(data.solvable, data.solution)
         }).catch(function (error){
-	        console.error(error)
+	        console.log(error)
         })
     
 }
