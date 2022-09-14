@@ -7,9 +7,7 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-app.get('/',(req,res) => {
-    res.send('App is running')
-})
+
 
 app.post('/solve', (req,res) => {
     const options = {
@@ -31,4 +29,8 @@ app.post('/solve', (req,res) => {
     })
 })
 
+
+app.get('/',(req,res) => {
+    res.send('App is running')
+})
 app.listen(PORT, () => console.log('server listening on PORT ',{PORT}))
