@@ -9,7 +9,7 @@ app.use(express.json())
 
 
 
-app.post('/', (req,res) => {
+app.post('https://project-sathom.herokuapp.com/', (req,res) => {
     const options = {
         method: 'POST',
         url: 'https://solve-sudoku.p.rapidapi.com/',
