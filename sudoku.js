@@ -45,7 +45,7 @@ function solveSudoku(){
     const data  = {numbers: submission.join('')}                  //.join() will convert our submission array in a string and separate each and every string element by 
     console.log('data', data)                                   //format specifier mentioned in the () barcket if u leave the bracket empty then by default it will seperate each and every elemnt by a comma(,)
     
-    fetch('https://project-s1.herokuapp.com/',{
+    fetch('https://project-sathom.herokuapp.com/',{
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
