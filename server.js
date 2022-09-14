@@ -2,14 +2,12 @@ const PORT = process.env.PORT || 8000
 const axios = require('axios').default
 const express = require('express')
 const cors = require('cors')
-const corsOption = {
-    origin:'*', 
-   credentials:true,            //access-control-allow-credentials:true
-   optionSuccessStatus:200,
-}
+
 require('dotenv').config()
 const app = express()
-app.use(cors(corsOption))
+app.use(cors({
+    origin: 'https://project-sathom.herokuapp.com/solve:heartfelt-blancmange-4ce36d.netlify.app/',
+}))
 app.use(express.json())
 
 
