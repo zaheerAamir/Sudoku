@@ -12,7 +12,6 @@ const app = express()
 app.use(cors(corsOption))
 app.use(express.json())
 
-const dud = process.env.RAPID_API_KEY
 
 app.post('/', (req,res) => {
 
@@ -21,7 +20,7 @@ app.post('/', (req,res) => {
         url: 'https://solve-sudoku.p.rapidapi.com/',
         headers: {
             'content-type': 'application/json',
-            'X-RapidAPI-Key': dud,
+            'X-RapidAPI-Key': process.env.RAPID_API_KEY,
             'X-RapidAPI-Host': 'solve-sudoku.p.rapidapi.com'
         },
         data: {puzzle: req.body.numbers}
