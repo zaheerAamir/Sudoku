@@ -23,3 +23,35 @@ body{
     width: 100px;
     box-shadow: 4px 4px;
 }
+
+.txt{
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 700px){
+    body{
+        background-color: lightgray;   
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .puzzle{
+        height: 400px;
+        width: 350px;
+    }
+    
+    .puzzle input{
+        width: 30px;
+        height: 30px;
+        border-spacing: 0;
+        border: 2px grey solid;
+    }
+
+    #solve-button{
+        height: 50px;
+        width: 100px;
+        box-shadow: 4px 4px;
+    }
+}

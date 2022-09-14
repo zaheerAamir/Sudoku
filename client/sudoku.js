@@ -27,12 +27,16 @@ function joinValues(){                                    //creating a function 
 //solve.addEventListener('click', joinValues)
 
 function populateValues(isSolvable, solution){
+    const show = document.querySelector('.txt')
     const inputs = document.querySelectorAll('input')
     console.log(inputs)
     if(isSolvable && solution){
         inputs.forEach((input ,j) => {
             input.value = solution[j]
         })
+        show.innerHTML = 'Yay the Sudoku is Solvable!'
+    } else{
+        show.innerHTML = 'Oops Sudoku is not solvable pls check the input numbers on the board'
     }
 }
 
