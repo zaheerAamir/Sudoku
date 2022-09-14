@@ -7,6 +7,10 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
+app.get('/',(req,res) => {
+    res.send('App is running')
+})
+
 app.post('/solve', (req,res) => {
     const options = {
         method: 'POST',
