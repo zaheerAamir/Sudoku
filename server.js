@@ -14,7 +14,7 @@ app.use(express.json())
 
 
 
-app.post('https://project-sathom.herokuapp.com/', (req,res) => {
+app.post('/', (req,res) => {
 
     const options = {
         method: 'GET',
