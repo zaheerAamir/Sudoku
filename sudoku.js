@@ -63,7 +63,7 @@ function solveSudoku(){
         },
         function(rejectionReson){
             console.log('Error parsing JSON from response:', rejectionReson,responseClone)
-            responseClone.text()
+            return responseClone.text()
         })
         .then(function(bodytext){
             console.log('recieved the following instead of valid JSON:',bodytext )
