@@ -39,7 +39,7 @@ function populateValues(isSolvable, solution){
         show.innerHTML = 'Oops Sudoku is not solvable pls check the input numbers on the board'
     }
 }
-
+var responseClone
 function solveSudoku(){
     joinValues()
     const data  = {numbers: submission.join('')}                  //.join() will convert our submission array in a string and separate each and every string element by 
@@ -54,12 +54,21 @@ function solveSudoku(){
         },
         body: JSON.stringify(data)
     })  .then(function(response){
-             return response.json()
+            responseClone = response.clone()
+            return response.json()
     }) 
         .then(function(data){
             console.log(data)
             populateValues(data.solvable, data.solution)
-        }).catch(function (error){
+        },
+        function(rejectionReson){
+            console.log('Error parsing JSON from response:', rejectionReson,responseClone)
+            responseClone.text()
+        })
+        .then(function(bodytext){
+            console.log('recieved the following instead of valid JSON:',bodytext )
+        })
+        .catch(function (error){
 	        console.error(error)
         })
     
