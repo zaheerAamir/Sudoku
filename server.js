@@ -12,7 +12,7 @@ app.use(cors({
 app.use(express.json())
 
 app.get('/',(req,res) => {
-    console.log('App is running')
+    res.send('App is running')
 })
 app.post('/', (req,res) => {
 
@@ -33,6 +33,8 @@ app.post('/', (req,res) => {
     }).catch(function (error) {
 	    console.error(error)
     })
+
+    res.send('request completed')
 })
 
 app.listen(PORT, () => console.log('server listening on PORT ',{PORT}))
