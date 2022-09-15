@@ -53,7 +53,9 @@ function solveSudoku(){
             'Accept': 'application/json'
         },
         body: JSON.stringify(data)
-    })  .then(response => response.json())  
+    })  .then(function(response){
+             return response.json()
+    }) 
         .then(function(data){
             console.log(data)
             populateValues(data.solvable, data.solution)
