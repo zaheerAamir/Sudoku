@@ -29,6 +29,7 @@ app.post('/', (req,res) => {
 
     axios.request(options).then(function (response) {
 	    console.log(response.data);
+        console.log(response.status)
         res.json(response.data)
     }).catch(function (error) {
 	    console.error(error)
