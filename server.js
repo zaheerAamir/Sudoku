@@ -11,7 +11,9 @@ app.use(cors({
 }))
 app.use(express.json())
 
-
+app.get('/',(req,res) => {
+    console.log('App is running')
+})
 app.post('/solve', (req,res) => {
 
     const options = {
