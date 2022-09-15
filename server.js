@@ -24,7 +24,7 @@ app.post('/', (req,res) => {
             'X-RapidAPI-Key': process.env.RAPID_API_KEY,
             'X-RapidAPI-Host': 'solve-sudoku.p.rapidapi.com'
         },
-        data: {'puzzle': req.body.numbers}     //req.body.numbers
+        data: {puzzle: 'req.body.numbers'}     //req.body.numbers
     }
 
     axios.request(options).then(function (response) {
