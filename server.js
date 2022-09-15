@@ -21,7 +21,7 @@ app.post('/', (req,res) => {
         url: 'https://solve-sudoku.p.rapidapi.com/',
         headers: {
             'content-type': 'application/json',
-            'X-RapidAPI-Key': process.env.RAPID_API_KEY,
+            'X-RapidAPI-Key': '4c950a4ca5msh959e74b886a4c78p1c992bjsnd97091aca10',
             'X-RapidAPI-Host': 'solve-sudoku.p.rapidapi.com'
         },
         data: {puzzle: req.body.numbers}
