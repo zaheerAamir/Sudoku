@@ -9,3 +9,5 @@ correct solution according to the input given.
 
 Used NODE.js to design the backend of the website and 
 to design the client side (Frontend) used htmls,css and js
+
+Used packages like express,cheerio,dotenv,cors and axios
