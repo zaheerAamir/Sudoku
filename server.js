@@ -35,7 +35,6 @@ app.post('/', (req,res) => {
 	    console.error(error)
     })
 
-    res.send('request completed')
 })
 
 app.listen(PORT, () => console.log('server listening on PORT ',{PORT}))
