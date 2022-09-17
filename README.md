@@ -11,3 +11,5 @@ Used NODE.js to design the backend of the website and
 to design the client side (Frontend) used htmls,css and js
 
 Used packages like express,cheerio,dotenv,cors and axios
+
+Note: Download CORS Unblock extension on any web browser you are using to view this site.
