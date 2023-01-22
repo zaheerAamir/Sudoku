@@ -1,4 +1,4 @@
-SUDOKU SOLVER:
+# SUDOKU SOLVER:
 
 Project Website: https://sdoku-solver.netlify.app
 
@@ -13,3 +13,5 @@ to design the client side (Frontend) used htmls,css and js
 Used packages like express,cheerio,dotenv,cors and axios
 
 Note: Download CORS Unblock extension on any web browser you are using to view this site.
+
+Temporarily the site is down because the backend of the site is deployed in Heroku
