@@ -47,7 +47,7 @@ function solveSudoku(){
     
     fetch('http://localhost:8000/',{
         method: 'POST',
-        mode: 'no-cors',
+        mode: 'cors',
         headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json'

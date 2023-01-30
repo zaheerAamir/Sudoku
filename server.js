@@ -5,10 +5,7 @@ const cors = require('cors')
 
 require('dotenv').config()
 const app = express()
-app.use(cors({
-    origin: 'http://localhost:8000/:https://sdoku-solver.netlify.app/',
-    methods: ['GET','POST'],
-}))
+
 app.use(express.json())
 
 /* app.get('/',(req,res) => {
