@@ -2,9 +2,11 @@ const PORT = process.env.PORT || 8000
 const axios = require('axios').default
 const express = require('express')
 const cors = require('cors')
+const serverless = require('serverless-http')
 
 require('dotenv').config()
 const app = express()
+const router = express.Router()
 
 app.use(cors({origin: '*'}))
 
@@ -13,7 +15,7 @@ app.use(express.json())
 /* app.get('/',(req,res) => {
     res.send('App is running')
 }) */
-app.post('/', (req,res) => {
+router.post('/', (req,res) => {
 
     const options = {
         method: 'POST',
@@ -34,6 +36,10 @@ app.post('/', (req,res) => {
 	    console.error(error)
     })
 
+
 })
 
-app.listen(PORT, () => console.log('server listening on PORT ',{PORT}))
+
+app.use('/.netlify/functions/server', router)
+
+module.exports.handler = serverless(app)
