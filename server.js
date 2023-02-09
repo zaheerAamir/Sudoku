@@ -8,7 +8,7 @@ require('dotenv').config()
 const app = express()
 const router = express.Router()
 
-app.use(cors({origin: ['http://localhost:8000/','https://sudoku-solver-app.onrender.com/']}))
+app.use(cors({origin: '*', methods: ['GET','POST']}))
 
 app.use(express.json())
 
