@@ -15,10 +15,10 @@ app.use(express.json())
 /* app.get('/',(req,res) => {
     res.send('App is running')
 }) */
-app.get('/', (req,res) => {
+app.post('/', (req,res) => {
 
     const options = {
-        method: 'GET',
+        method: 'POST',
         url: 'https://solve-sudoku.p.rapidapi.com/',
         headers: {
             'content-type': 'application/json',
