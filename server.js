@@ -8,17 +8,17 @@ require('dotenv').config()
 const app = express()
 const router = express.Router()
 
-app.use(cors({origin: '*', methods: ['GET','POST']}))
+app.use(cors({origin: '*'}))
 
 app.use(express.json())
 
 /* app.get('/',(req,res) => {
     res.send('App is running')
 }) */
-app.post('/', (req,res) => {
+app.get('/', (req,res) => {
 
     const options = {
-        method: 'POST',
+        method: 'GET',
         url: 'https://solve-sudoku.p.rapidapi.com/',
         headers: {
             'content-type': 'application/json',
