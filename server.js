@@ -32,6 +32,7 @@ app.get('/', (req,res) => {
 	    console.log(response.data);
         console.log(response.status)
         res.json(response.data)
+        res.json('yooooooo')
     }).catch(function (error) {
 	    console.error(error)
     })
