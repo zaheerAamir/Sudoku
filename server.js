@@ -15,7 +15,7 @@ app.use(express.json())
 /* app.get('/',(req,res) => {
     res.send('App is running')
 }) */
-router.post('/', (req,res) => {
+app.post('/', (req,res) => {
 
     const options = {
         method: 'POST',
@@ -40,5 +40,4 @@ router.post('/', (req,res) => {
 })
 
 
-app.use('/.netlify/functions/server', router)
-module.exports.handler = serverless(app)
+app.listen(PORT, () => {console.log(`Server is running on ${PORT}`)})
