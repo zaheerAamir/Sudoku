@@ -12,4 +12,3 @@ to design the client side (Frontend) used htmls,css and js
 
 Used packages like express,cheerio,dotenv,cors and axios
 
-Temporarily the site is down because the backend of the site is deployed in Heroku
