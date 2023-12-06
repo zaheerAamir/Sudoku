@@ -17,7 +17,6 @@ app.use(express.json())
 }) */
 app.post('/', (req, res) => {
 
-    const tick = performance.now()
     const options = {
         method: 'POST',
         url: 'https://solve-sudoku.p.rapidapi.com/',
@@ -32,8 +31,6 @@ app.post('/', (req, res) => {
     axios.request(options).then(function (response) {
         console.log(response.data);
         console.log(response.status)
-        const tock = performance.now()
-        console.log(`Time took:  ${tock - tick}ms `)
         res.json(response.data)
     }).catch(function (error) {
         console.error(error)
